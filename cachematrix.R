@@ -10,8 +10,13 @@
 ## (2) get the value of the matrix
 ## (3) set the value of the inverse matrix
 ## (4) get the value of the inverse matrix
-## The <<- operator in this functionn is used to assign a value to an
+## The <<- operator in this function is used to assign a value to an
 ## object in an environment that is different from the current environment
+## In our case in function set we assigned values to the objects x and inv and 
+## this objects will also "live" in the environment of the function
+## makeCacheMatrix (and will even overwrite the values we assigned in this
+## environment). The same is also true for the function setinverse, where we
+## used the <<- operator to assign a value to inv.
 
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
